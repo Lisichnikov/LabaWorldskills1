@@ -7,8 +7,15 @@ Console.Write("Введите число n:");
 double n = Convert.ToDouble(Console.ReadLine()); // число n
 double result = 0; // переменная для результата
 
-for (double i = 0; i <= n; i++)
+if (Math.Abs(x) <= 1)
 {
-    result += ((Math.Pow(-1, n)) * (Math.Pow(x, (2*n + 1)))) / (2*n + 1); // формула
+    for (double i = 0; i <= n; i++)
+    {
+        result += ((Math.Pow(-1, n)) * (Math.Pow(x, (2 * n + 1)))) / (2 * n + 1); // формула
+    }
+    Console.WriteLine(result); // вывод результата в консоль
 }
-Console.WriteLine(result); // вывод результата в консоль
+else
+{
+    Console.WriteLine("Модуль x больше 1!!!!!");
+}
